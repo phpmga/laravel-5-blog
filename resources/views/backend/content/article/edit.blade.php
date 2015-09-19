@@ -8,7 +8,7 @@
 
         <div class="col-md-10">
             <div class="panel panel-default">
-                <div class="panel-heading">编辑文章</div>
+                <div class="panel-heading">Editar Artigo</div>
 
                 @if ($errors->has('error'))
                 <div class="alert alert-danger alert-dismissible" role="alert">
@@ -17,7 +17,7 @@
                     <strong>Error!</strong>
                     {{ $errors->first('error', ':message') }}
                     <br />
-                    请联系开发者！
+                    Entre em contato com o desenvolvedor!
                 </div>
                 @endif
 
@@ -26,15 +26,15 @@
 
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">标题</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label">Título</label>
                             <div class="col-sm-7">
-                                {!! Form::text('title', $article->title, ['class' => 'form-control','placeholder'=>'title']) !!}
+                                {!! Form::text('title', $article->title, ['class' => 'form-control','placeholder'=>'título']) !!}
                                 <font color="red">{{ $errors->first('title') }}</font>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">所属分类</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label">Categoria</label>
                             <div class="col-sm-7">
                                 {!! Form::select('cate_id', $catArr , null , ['class' => 'form-control']) !!}
                             </div>
@@ -42,16 +42,16 @@
 
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">标签</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label">Tags</label>
                             <div class="col-sm-7">
-                                {!! Form::text('tags', '', ['class' => 'form-control','placeholder'=>'回车确定','id'=>'tags']) !!}
+                                {!! Form::text('tags', '', ['class' => 'form-control','placeholder'=>'Digite aqui','id'=>'tags']) !!}
                                 <font color="red">{{ $errors->first('tags') }}</font>
                             </div>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">封面图</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label">Foto da capa</label>
                             <div class="col-sm-7">
                                 {!! Form::file('pic') !!}
                                 <font color="red">{{ $errors->first('pic') }}</font>
@@ -63,7 +63,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">内容</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label">Conteúdo</label>
                             <div class="col-sm-3">
                                 <div class="editor">
                                     @include('editor::head')
@@ -75,7 +75,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                {!! Form::submit('修改', ['class' => 'btn btn-success']) !!}
+                                {!! Form::submit('Modificar', ['class' => 'btn btn-success']) !!}
                             </div>
                         </div>
                         {!! Form::close() !!}

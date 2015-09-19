@@ -4,17 +4,17 @@
         <div class="col-md-10">
             <div class="panel panel-default">
                 {!! Notification::showAll() !!}
-                <div class="panel-heading">内容管理</div>
+                <div class="panel-heading">Gerenciamento de Conteúdo</div>
 
                 <div class="panel-body">
-                    <a class="btn btn-success" href="{{ URL::route('backend.tags.create')}}">创建标签</a>
+                    <a class="btn btn-success" href="{{ URL::route('backend.tags.create')}}">Nova Tag</a>
 
                     <table class="table table-hover table-top">
                         <tr>
                             <th>#</th>
-                            <th>标签名</th>
-                            <th>引用次数</th>
-                            <th class="text-right">操作</th>
+                            <th>Nome</th>
+                            <th>Criado em</th>
+                            <th class="text-right">Ação</th>
                         </tr>
 
                         @foreach($tags as $k=> $v)
@@ -48,7 +48,7 @@
 
                                 <button type="submit" class="btn btn-info">
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    修改
+                                    Modificar
                                 </button>
                                 {!! Form::close() !!}
 

@@ -1,15 +1,15 @@
 <div class="panel panel-default">
-    <div class="panel-heading">导航</div>
+    <div class="panel-heading">Navegação</div>
 
     <div class="panel-body text-center">
 
         <ul class="nav nav-list">
             <li>
-                <a href="{{ url('/backend/system/index') }}">基本设置</a>
+                <a href="{{ url('/backend/system/index') }}">Definições básicas</a>
             </li>
 
             <li>
-                <a href="{{ url(route('backend.nav.index')) }}">导航设置</a>
+                <a href="{{ url(route('backend.nav.index')) }}">Definições de navegação</a>
             </li>
 
         </ul>

@@ -4,7 +4,7 @@
 
     <div class="col-md-10">
         <div class="panel panel-default">
-            <div class="panel-heading">查看评论</div>
+            <div class="panel-heading">Ver Comentários</div>
 
             {!! Notification::showAll() !!}
             @if ($errors->has('error'))
@@ -14,7 +14,7 @@
                     <strong>Error!</strong>
                     {{ $errors->first('error', ':message') }}
                     <br />
-                    请联系开发者！
+                    Entre em contato com o desenvolvedor!
                 </div>
             @endif
 
@@ -26,35 +26,35 @@
                             <td>{{ $commentInfo->id }}</td>
                         </tr>
                         <tr>
-                            <th>用户</th>
+                            <th>Usuário</th>
                             <td>{{ $commentInfo->username }}</td>
                         </tr>
                         <tr>
-                            <th>邮箱</th>
+                            <th>Email</th>
                             <td>{{ $commentInfo->email }}</td>
                         </tr>
                         <tr>
-                            <th>时间</th>
+                            <th>Enviado em</th>
                             <td>{{ $commentInfo->created_at }}</td>
                         </tr>
                         <tr>
-                            <th>评论于</th>
+                            <th>Sobre</th>
                             <td>
                                 {{ $commentInfo->article->title }}
-                                <a href="{{ url(route('article.show',['id'=>$commentInfo->el_id])) }}" target="_blank" >点击查看</a>
+                                <a href="{{ url(route('article.show',['id'=>$commentInfo->el_id])) }}" target="_blank" > Ver</a>
                             </td>
                         </tr>
                         <tr>
-                            <th>回复or评论</th>
+                            <th>Responder</th>
                             <td>
-                                {{ $commentInfo->parent_id == 0?'评论':'回复用户：'.\App\model\Comment::getCommentReplyUserNameByCommentId($commentInfo->parent_id).'， 的评论' }}
+                                {{ $commentInfo->parent_id == 0?'Crítica':'Responder：'.\App\model\Comment::getCommentReplyUserNameByCommentId($commentInfo->parent_id).'， Comentários' }}
                                 @if($commentInfo->parent_id != 0)
-                                    <a href="{{ url(route('backend.comment.show',['id'=>$commentInfo->parent_id])) }}" target="_blank" >点击查看</a>
+                                    <a href="{{ url(route('backend.comment.show',['id'=>$commentInfo->parent_id])) }}" target="_blank" > Ver</a>
                                 @endif
                             </td>
                         </tr>
                         <tr>
-                            <th>内容</th>
+                            <th>Conteúdo</th>
                             <td>
                                 {{ $commentInfo->content }}
                                 <br />
@@ -63,7 +63,7 @@
 
                     </table>
                     <a href="{{ url(route('backend.comment.create',['id'=>$commentInfo->id])) }}" target="_blank" class="btn btn-info" >
-                        点击回复
+                        Responder
                     </a>
                 </div>
 

@@ -44,21 +44,21 @@
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="{{URL::route('backend.home.index')}}">后台主页</a></li>
-					<li><a href="{{URL::route('backend.content.index')}}">内容管理</a></li>
-					<li><a href="{{ url('/backend/system/index') }}">系统设置</a></li>
+					<li><a href="{{URL::route('backend.home.index')}}">Início</a></li>
+					<li><a href="{{URL::route('backend.content.index')}}">Gerenciamento de Conteúdo</a></li>
+					<li><a href="{{ url('/backend/system/index') }}">Configurações do Sistema</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
-						<li><a href="{{ url('/backend/auth/login') }}">Login</a></li>
-						<li><a href="{{ url('/backend/auth/register') }}">Register</a></li>
+						<li><a href="{{ url('/backend/auth/login') }}">Entrar</a></li>
+						<li><a href="{{ url('/backend/auth/register') }}">Registrar</a></li>
 					@else
-                        <li><a href="/">网站主页</a></li>
+                        <li><a href="/">Ver Blog</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/backend/auth/logout') }}">Logout</a></li>
+								<li><a href="{{ url('/backend/auth/logout') }}">Sair</a></li>
 							</ul>
 						</li>
 					@endif

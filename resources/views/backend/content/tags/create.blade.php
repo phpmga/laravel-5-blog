@@ -3,7 +3,7 @@
 @section('content')
 <div class="col-md-10">
     <div class="panel panel-default">
-        <div class="panel-heading">创建分类</div>
+        <div class="panel-heading">Criar Tag</div>
 
         @if ($errors->has('error'))
         <div class="alert alert-danger alert-dismissible" role="alert">
@@ -12,7 +12,7 @@
             <strong>Error!</strong>
             {{ $errors->first('error', ':message') }}
             <br />
-            请联系开发者！
+            Entre em contato com o desenvolvedor!
         </div>
         @endif
 
@@ -21,16 +21,16 @@
 
 
             <div class="form-group">
-                <label for="inputPassword3" class="col-sm-2 control-label">标签名</label>
+                <label for="inputPassword3" class="col-sm-2 control-label">Nome</label>
                 <div class="col-sm-3">
-                    {!! Form::text('name', '', ['class' => 'form-control','placeholder'=>'Tag Name']) !!}
+                    {!! Form::text('name', '', ['class' => 'form-control','placeholder'=>'Tag']) !!}
                     <font color="red">{{ $errors->first('name') }}</font>
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    {!! Form::submit('创建', ['class' => 'btn btn-success']) !!}
+                    {!! Form::submit('Criar', ['class' => 'btn btn-success']) !!}
                 </div>
             </div>
             {!! Form::close() !!}

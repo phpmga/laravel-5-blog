@@ -11,9 +11,9 @@
     <div id="cover-image" class="image-bg3 animated fadeIn"></div>
     <div class="container welcome-content">
         <div class="middle-text">
-            <h1>哎呀，访问的页面去冥王星旅游去了</h1>
-            <h2>先去看看其它的吧</h2>
-            <a class="btn" href="{{ url('/') }}" title="{{ systemConfig('title','Enda Blog') }}">返回首页</a><br>
+            <h1>Ah，a página que você procura não pode ser encontrada</h1>
+            <h2>Veja outros artigos</h2>
+            <a class="btn" href="{{ url('/') }}" title="{{ systemConfig('title','Enda Blog') }}">Home</a><br>
         </div>
     </div>
 </section>
@@ -27,7 +27,7 @@
                 @foreach($hotArticle as $key=>$article)
                     <div class="col-sm-4 col-md-4">
                         <a href="{{ url(route('article.show',['id'=>$article->id])) }}" title="{{ $article->title }}" target="_blank">
-                            <img src="{{ asset('uploads/'.$article->pic) }}" class="img-responsive" alt="img2" width="300px" height="150px" title="{{ $article->title }}" alt="{{ $article->title }}">
+                            <img src="{{ asset('uploads/'.$article->pic) }}" class="img-responsive" width="300px" height="150px" title="{{ $article->title }}" alt="{{ $article->title }}">
                         </a>
                         <h4 class="text-center">
                             <a href="{{ url(route('article.show',['id'=>$article->id])) }}" title="{{ $article->title }}" target="_blank">{{ $article->title }}</a>

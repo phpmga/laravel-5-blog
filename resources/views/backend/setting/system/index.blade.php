@@ -4,19 +4,19 @@
         <div class="col-md-10">
             <div class="panel panel-default">
                 {!! Notification::showAll() !!}
-                <div class="panel-heading">内容管理</div>
+                <div class="panel-heading">Gerenciamento de Conteúdo</div>
 
                 <div class="panel-body">
-                    <a class="btn btn-success" href="{{ url('/backend/system/create') }}">创建设置</a>
+                    <a class="btn btn-success" href="{{ url('/backend/system/create') }}">Criar Grupo</a>
 
                     <form action="{{ url('backend/system/store')}}" method="post" class="form-horizontal" >
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <table class="table table-hover table-top">
                             <tr>
                                 <th>#</th>
-                                <th>名称</th>
-                                <th>值</th>
-                                <th class="text-right">操作</th>
+                                <th>Nome</th>
+                                <th>Valor</th>
+                                <th class="text-right">Ação</th>
                             </tr>
 
                             @foreach($system as $k=> $v)
@@ -32,7 +32,7 @@
 
                                     <a href="{{ url('/backend/system/delete',['id'=>$v->id]) }}" class="btn btn-danger" >
                                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                        删除
+                                        Excluir
                                     </a>
 
                                 </td>
@@ -42,7 +42,7 @@
                         </table>
 
                         <button type="submit" class="btn btn-success">
-                            保存
+                            Salvar
                         </button>
 
                     </form>

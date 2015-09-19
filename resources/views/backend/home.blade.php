@@ -8,14 +8,14 @@
 
         <div class="col-md-2">
             <div class="panel panel-default">
-                <div class="panel-heading">导航</div>
+                <div class="panel-heading">Navegação</div>
 
 
                     <div class="panel-body text-center">
 
                         <ul class="nav nav-list">
                             <li>
-                                <a href="{{ URL::route('backend.user.index')}}">管理员列表</a>
+                                <a href="{{ URL::route('backend.user.index')}}">Lista de Administradores</a>
                             </li>
                         </ul>
 
@@ -30,7 +30,7 @@
 				<div class="panel-heading">Home</div>
 
 				<div class="panel-body">
-					You are logged in!
+					Bem-vindo!
 				</div>
 			</div>
 		</div>

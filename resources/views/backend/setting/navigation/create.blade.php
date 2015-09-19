@@ -3,7 +3,7 @@
 @section('content')
         <div class="col-md-10">
             <div class="panel panel-default">
-                <div class="panel-heading">创建导航</div>
+                <div class="panel-heading">Criar navegação</div>
 
                 @if ($errors->has('error'))
                 <div class="alert alert-danger alert-dismissible" role="alert">
@@ -12,7 +12,7 @@
                     <strong>Error!</strong>
                     {{ $errors->first('error', ':message') }}
                     <br />
-                    请联系开发者！
+                    Entre em contato com o desenvolvedor！
                 </div>
                 @endif
 
@@ -20,7 +20,7 @@
                     {!! Form::open(['route' => 'backend.nav.store', 'method' => 'post','class'=>'form-horizontal']) !!}
 
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">上级导航</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label">Navegação superior</label>
                             <div class="col-sm-3">
                                {{ App\Model\Navigation::getNavNameByNavId($parent_id) }}
                                 {!! Form::hidden('parent_id',$parent_id) !!}
@@ -28,23 +28,23 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">排序</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label">Sequência</label>
                             <div class="col-sm-3">
-                                {!! Form::text('sequence', '', ['class' => 'form-control','placeholder'=>'sequence']) !!}
+                                {!! Form::text('sequence', '', ['class' => 'form-control','placeholder'=>'sequência']) !!}
                                 <font color="red">{{ $errors->first('sequence') }}</font>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">导航名称</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label">Nome da navegação</label>
                             <div class="col-sm-3">
-                                {!! Form::text('name', '', ['class' => 'form-control','placeholder'=>'name']) !!}
+                                {!! Form::text('name', '', ['class' => 'form-control','placeholder'=>'nome']) !!}
                                 <font color="red">{{ $errors->first('name') }}</font>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">链接地址</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label">Endereço de ligação</label>
                             <div class="col-sm-3">
                                 {!! Form::text('url', '', ['class' => 'form-control','placeholder'=>'url']) !!}
                                 <font color="red">{{ $errors->first('url') }}</font>
@@ -53,7 +53,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                {!! Form::submit('创建', ['class' => 'btn btn-success']) !!}
+                                {!! Form::submit('Criar', ['class' => 'btn btn-success']) !!}
                             </div>
                         </div>
                         {!! Form::close() !!}

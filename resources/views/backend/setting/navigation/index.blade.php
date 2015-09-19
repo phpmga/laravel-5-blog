@@ -4,18 +4,18 @@
         <div class="col-md-10">
             <div class="panel panel-default">
                 {!! Notification::showAll() !!}
-                <div class="panel-heading">内容管理</div>
+                <div class="panel-heading">Gerenciamento de Conteúdo</div>
 
                 <div class="panel-body">
-                    <a class="btn btn-success" href="{{ URL::route('backend.nav.create')}}">添加导航</a>
+                    <a class="btn btn-success" href="{{ URL::route('backend.nav.create')}}">Adicionar navegação</a>
 
                     <table class="table table-hover table-top">
                         <tr>
                             <th>#</th>
-                            <th>名称</th>
-                            <th>地址</th>
-                            <th>创建时间</th>
-                            <th class="text-right">操作</th>
+                            <th>Nome</th>
+                            <th>Endereço</th>
+                            <th>Criado em</th>
+                            <th class="text-right">Ação</th>
                         </tr>
 
                         @foreach($list as $k=> $v)
@@ -29,7 +29,7 @@
 
                                 @if($v->parent_id == 0)
                                     <a href="{{ url(route('backend.nav.create',['parentId'=>$v->id])) }} " style="margin-right: 10px;" class="btn btn-info"  >
-                                        添加导航
+                                        Adicionar navegação
                                     </a>
                                 @endif
 
@@ -41,7 +41,7 @@
 
                                 <button type="submit" class="btn btn-danger">
                                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                    删除
+                                    Excluir
                                 </button>
 
                                 {!! Form::close() !!}
@@ -54,7 +54,7 @@
 
                                 <button type="submit" class="btn btn-info">
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    修改
+                                    Modificar
                                 </button>
                                 {!! Form::close() !!}
 

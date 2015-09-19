@@ -4,20 +4,20 @@
         <div class="col-md-10">
             <div class="panel panel-default">
                 {!! Notification::showAll() !!}
-                <div class="panel-heading">内容管理</div>
+                <div class="panel-heading">Gerenciamento de Conteúdo</div>
 
                 <div class="panel-body">
-                    <a class="btn btn-success" href="{{ URL::route('backend.article.create')}}">写文章</a>
+                    <a class="btn btn-success" href="{{ URL::route('backend.article.create')}}">Novo Artigo</a>
 
                     <table class="table table-hover table-top">
                         <tr>
                             <th>#</th>
-                            <th>title</th>
-                            <th>所属分类</th>
-                            <th>作者</th>
-                            <th>游览次数</th>
-                            <th>创建时间</th>
-                            <th class="text-right">操作</th>
+                            <th>Título</th>
+                            <th>Categoria</th>
+                            <th>Autor</th>
+                            <th>Publicado em</th>
+                            <th>Criado em</th>
+                            <th class="text-right">Ações</th>
                         </tr>
 
                         @foreach($article as $k=> $v)
@@ -39,7 +39,7 @@
 
                                 <button type="submit" class="btn btn-danger">
                                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                    删除
+                                    Excluir
                                 </button>
 
                                 {!! Form::close() !!}
@@ -52,7 +52,7 @@
 
                                 <button type="submit" class="btn btn-info">
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    修改
+                                    Modificar
                                 </button>
                                 {!! Form::close() !!}
 

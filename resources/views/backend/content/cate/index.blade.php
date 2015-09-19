@@ -4,17 +4,17 @@
         <div class="col-md-10">
             <div class="panel panel-default">
                 {!! Notification::showAll() !!}
-                <div class="panel-heading">内容管理</div>
+                <div class="panel-heading">Gerenciamento de Conteúdo</div>
 
                 <div class="panel-body">
-                    <a class="btn btn-success" href="{{ URL::route('backend.cate.create')}}">创建分类</a>
+                    <a class="btn btn-success" href="{{ URL::route('backend.cate.create')}}">Nova Categoria</a>
 
                     <table class="table table-hover table-top">
                         <tr>
                             <th>#</th>
-                            <th>分类名称</th>
-                            <th>创建时间</th>
-                            <th class="text-right">操作</th>
+                            <th>Nome</th>
+                            <th>Criado em</th>
+                            <th class="text-right">Ações</th>
                         </tr>
 
                         @foreach($cate as $k=> $v)
@@ -35,7 +35,7 @@
 
                                 <button type="submit" class="btn btn-danger">
                                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                    删除
+                                    Excluir
                                 </button>
 
                                 {!! Form::close() !!}
@@ -48,7 +48,7 @@
 
                                 <button type="submit" class="btn btn-info">
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    修改
+                                    Modificar
                                 </button>
                                 {!! Form::close() !!}
 

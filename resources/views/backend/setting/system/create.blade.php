@@ -3,7 +3,7 @@
 @section('content')
         <div class="col-md-10">
             <div class="panel panel-default">
-                <div class="panel-heading">创建分类</div>
+                <div class="panel-heading">Criar Categoria</div>
 
                 @if ($errors->has('error'))
                 <div class="alert alert-danger alert-dismissible" role="alert">
@@ -12,7 +12,7 @@
                     <strong>Error!</strong>
                     {{ $errors->first('error', ':message') }}
                     <br />
-                    请联系开发者！
+                    Entre em contato com o desenvolvedor！
                 </div>
                 @endif
 
@@ -20,14 +20,14 @@
                     <form action="{{ url('backend/system/create')}}" method="post" class="form-horizontal" >
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">分类</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label">Classificação</label>
                             <div class="col-sm-3">
                                 {!! Form::select('cate', App\Model\System::$cate , null , ['class' => 'form-control']) !!}
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">代码</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label">Código</label>
                             <div class="col-sm-3">
                                 {!! Form::text('system_name', '', ['class' => 'form-control','placeholder'=>'code']) !!}
                                 <font color="red">{{ $errors->first('system_name') }}</font>
@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">值</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label">Valor</label>
                             <div class="col-sm-3">
                                 {!! Form::text('system_value', '', ['class' => 'form-control','placeholder'=>'system_value']) !!}
                                 <font color="red">{{ $errors->first('system_value') }}</font>
@@ -46,7 +46,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                {!! Form::submit('创建', ['class' => 'btn btn-success']) !!}
+                                {!! Form::submit('Criar', ['class' => 'btn btn-success']) !!}
                             </div>
                         </div>
                     </form>

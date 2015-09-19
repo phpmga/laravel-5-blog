@@ -672,34 +672,34 @@ $(function() {
         //添加帮助
         var helpHtml = '<div class="editor-help">\
 <ul class="editor-help-tabs nav nav-tabs" id="editorHelpTab" role="tablist">\
-    <li rel="heading"><a href="#editorHelpHeading" role="tab" data-toggle="tab">Título / Itálico</a></li>\
-    <li rel="code"><a href="#editorHelpCode" role="tab" data-toggle="tag">Código</a></li>\
-    <li rel="link"><a href="#editorHelpLink" role="tab" data-toggle="tag">Link</a></li>\
-    <li rel="image"><a href="#editorHelpImage" role="tab" data-toggle="tag">Quadro</a></li>\
-    <li rel="split"><a href="#editorHelpSplit" role="tab" data-toggle="tag">Envoltório / Separador</a></li>\
-    <li rel="list"><a href="#editorHelpList" role="tab" data-toggle="tag">Lista / Citação</li></a>\
+    <li rel="heading"><a href="#editorHelpHeading" role="tab" data-toggle="tab">标题 / 粗斜体</a></li>\
+    <li rel="code"><a href="#editorHelpCode" role="tab" data-toggle="tag">代码</a></li>\
+    <li rel="link"><a href="#editorHelpLink" role="tab" data-toggle="tag">链接</a></li>\
+    <li rel="image"><a href="#editorHelpImage" role="tab" data-toggle="tag">图片</a></li>\
+    <li rel="split"><a href="#editorHelpSplit" role="tab" data-toggle="tag">换行 / 分隔符</a></li>\
+    <li rel="list"><a href="#editorHelpList" role="tab" data-toggle="tag">列表 / 引用</li></a>\
     </ul>\
 \
 <div class="tab-content">\
 <!-- 粗斜体、标题 -->\
 <div class="editor-help-content tab-pane fade" id="editorHelpHeading" rel="heading">\
 \
-<p>No conteúdo do artigo, você pode usar o segmento título：</p>\
-<pre>## Título ##\n\
-### Subtítulo ###\
+<p>文章内容较多时，可以用标题分段：</p>\
+<pre>## 大标题 ##\n\
+### 小标题 ###\
 </pre>\
 \
-<p>Negrito / Itálido</p>\
-<pre>*texto em itálico*    _texto em itálico_\n\
-**texto em negrito**    __texto em negrito__\n\
-***texto em itálico***    ___texto em itálico___\
+<p>粗体 / 斜体</p>\
+<pre>*斜体文本*    _斜体文本_\n\
+**粗体文本**    __粗体文本__\n\
+***粗斜体文本***    ___粗斜体文本___\
 </pre>\
 </div>\
 <!-- end 粗斜体、标题 -->\
 \
 <!-- 代码 -->\
 <div class="editor-help-content tab-pane fade" id="editorHelpCode" rel="code">\
-<p>Se você quiser apenas destacar a declaração de uma função ou palavras-chave, você pode usar <code>`function_name()`</code></p>\
+<p>如果你只想高亮语句中的某个函数名或关键字，可以使用 <code>`function_name()`</code> 实现</p>\
 <p>通常我们会根据您的代码片段适配合适的高亮方法，但你也可以用 <code>```</code> 包裹一段代码，并指定一种语言</p>\
 <pre>```<strong>javascript</strong>\n\
 $(document).ready(function () {\n\

@@ -20,7 +20,7 @@ class Category extends Model
     ];
 
     static $catData = [
-        0 => '顶级分类',
+        0 => 'Categoria topo',
     ];
 
     static $category = [];
@@ -57,7 +57,7 @@ class Category extends Model
     public static function getCategoryNameByCatId($catId)
     {
         $cate = self::getCategoryArr($catId);
-        return !empty($cate) ? $cate : '分类不存在';
+        return !empty($cate) ? $cate : 'Nenhum';
     }
 
     /**

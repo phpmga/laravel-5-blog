@@ -4,18 +4,18 @@
         <div class="col-md-10">
             <div class="panel panel-default">
                 {!! Notification::showAll() !!}
-                <div class="panel-heading">内容管理</div>
+                <div class="panel-heading">Gerenciar Administradores</div>
 
                 <div class="panel-body">
-                    <a class="btn btn-success" href="{{ URL::route('backend.user.create')}}">创建用户</a>
+                    <a class="btn btn-success" href="{{ URL::route('backend.user.create')}}">Novo Usuário</a>
 
                     <table class="table table-hover table-top">
                         <tr>
                             <th>#</th>
-                            <th>姓名</th>
-                            <th>邮箱</th>
-                            <th>创建时间</th>
-                            <th class="text-right">操作</th>
+                            <th>Nome completo</th>
+                            <th>Email</th>
+                            <th>Data de criação</th>
+                            <th class="text-right">Ação</th>
                         </tr>
 
                         @foreach($users as $k=> $v)
@@ -34,7 +34,7 @@
 
                                 <button type="submit" class="btn btn-danger">
                                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                    删除
+                                    Excluir
                                 </button>
 
                                 {!! Form::close() !!}
@@ -47,7 +47,7 @@
 
                                 <button type="submit" class="btn btn-info">
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    修改
+                                    Editar
                                 </button>
                                 {!! Form::close() !!}
 

@@ -4,3 +4,7 @@
 .env.php
 .idea
 /vendor
+.buildpath
+.project
+.settings/
+
